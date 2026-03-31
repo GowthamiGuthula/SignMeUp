@@ -1,7 +1,6 @@
-import React from 'react';
 import './Footer.css';
 
-export default function Footer() {
+function Footer() {
   return (
     <footer className="site-footer" role="contentinfo">
       <div className="site-footer__inner">
@@ -15,3 +14,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+export default Footer;

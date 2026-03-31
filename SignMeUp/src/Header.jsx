@@ -1,9 +1,8 @@
-import React from 'react';
 import './Header.css';
 import logo from './assets/signmeuplogo.png'
 import { NavLink } from 'react-router-dom';
 
-export default function Header() {
+function Header() {
     return (
         <header className="site-header">
             <div className="site-header__inner">
@@ -17,9 +16,10 @@ export default function Header() {
                 <nav className="site-nav" aria-label="Primary">
                     <button className="btn btn--ghost">About</button>
                     <button className="btn btn--primary">Sign up</button>
-                    <NavLink to="/Events" className="btn btn--secondary">Events</NavLink>
                 </nav>
             </div>
         </header>
     );
 }
+
+export default Header;
