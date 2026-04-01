@@ -3,6 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import {Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home';
+import Events from './Pages/Events';
 
 function App() {
     return (
@@ -11,6 +12,7 @@ function App() {
             <main>
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/events" element={<Events />} />
                 </Routes>
             </main>
             <Footer />
