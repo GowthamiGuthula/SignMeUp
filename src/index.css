@@ -109,7 +109,7 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
-* Ensure App container fills the root flex column so footer can sit at bottom */
+/* Ensure App container fills the root flex column so footer can sit at bottom */
 .app {
   display: flex;
   flex-direction: column;
