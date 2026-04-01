@@ -1,0 +1,77 @@
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: transparent;
+  padding: 18px 20px;
+}
+
+.site-header__inner {
+  max-width: 1126px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+}
+
+.brand__logo {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.brand__logo-img {
+  width: 144px;
+  height: 144px;
+  object-fit: contain;
+  display: block;
+}
+
+.brand__text h1 {
+  font-size: 40px;
+  margin: 0;
+  text-align: center;
+  color: var(--text-h);
+}
+
+.brand__text .tag {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.site-nav {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  font: inherit;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+}
+
+.btn--ghost {
+  background: transparent;
+}

@@ -1,0 +1,16 @@
+
+/* Ensure App container fills the root flex column so footer can sit at bottom */
+.app {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 100%;
+}
+
+.app-main {
+  flex: 1 1 auto; /* grow to take available space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
