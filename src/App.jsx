@@ -1,23 +1,24 @@
-import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
-import {Routes, Route } from 'react-router-dom';
-import Home from './Pages/Home';
-import Events from './Pages/Events';
+import { Routes, Route } from 'react-router-dom'
+import { EventsProvider } from './context/EventsContext'
+import './App.css'
+import Header from './Header'
+import Footer from './Footer'
+import Home from './pages/Home'
+import Events from './pages/Events'
 
 function App() {
-    return (
-        <>
-            <Header />
-            <main>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/events" element={<Events />} />
-                </Routes>
-            </main>
-            <Footer />
-        </>
-    );
+  return (
+    <EventsProvider>
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/events" element={<Events />} />
+        </Routes>
+      </main>
+      <Footer />
+    </EventsProvider>
+  )
 }
 
-export default App;
+export default App
