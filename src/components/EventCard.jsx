@@ -2,21 +2,9 @@ import { Link } from 'react-router-dom'
 import { formatAttendeeName } from '../utils/attendeeHelpers'
 import './EventCard.css'
 
-/**
- * EventCard Component
- * 
- * This component displays a single event in a card format on the Events page.
- * It shows event information and a preview of attendees.
- * 
- * Props:
- * - event: Event object with all event details
- * - isPast: Boolean indicating if the event has ended
- */
 function EventCard({ event, isPast }) {
-  // Calculate available slots
   const slotsLeft = event.totalSlots - event.slotsBooked
   
-  // Get first 3 attendees for display using shared utility
   const displayAttendees = event.attendees.slice(0, 3).map(formatAttendeeName)
   const hasMoreAttendees = event.attendees.length > 3
 
@@ -30,9 +18,6 @@ function EventCard({ event, isPast }) {
         </div>
         <p className="event-card-desc">{event.description}</p>
         <div className="event-card-meta">
-          {/* <span>📅 {event.date}</span>
-          <span>📍 {event.location}</span>
-          <span>🎟️ {slotsLeft} slots left</span> */}
           <span><i className="fas fa-calendar"></i> {event.date}</span>
           <span><i className="fas fa-map-marker-alt"></i> {event.location}</span>
           <span><i className="fas fa-ticket-alt"></i> {slotsLeft} slots left</span>

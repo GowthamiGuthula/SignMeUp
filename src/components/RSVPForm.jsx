@@ -2,20 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { validateRSVP } from '../utils/validation'
 import './RSVPForm.css'
 
-/**
- * RSVP Form Component
- * 
- * A reusable form component for RSVP functionality with built-in validation
- * and error handling. Can be used across different event-related pages.
- * 
- * @param {Object} props - Component props
- * @param {Function} props.onSubmit - Submit handler function
- * @param {Object} props.initialValues - Initial form values
- * @param {boolean} props.loading - Loading state
- * @param {string} props.submitText - Submit button text
- * @param {boolean} props.showRSVPOptions - Whether to show RSVP radio options
- * @param {Object} props.errors - External error messages
- */
 function RSVPForm({ 
   onSubmit, 
   initialValues = {}, 
@@ -36,9 +22,6 @@ function RSVPForm({
   const [errors, setErrors] = useState({})
   const [touched, setTouched] = useState({})
 
-  /**
-   * Reset internal errors when external duplicate error is cleared
-   */
   useEffect(() => {
     if (!externalErrors.duplicate) {
       // Clear any internal duplicate-related errors
@@ -49,9 +32,6 @@ function RSVPForm({
     }
   }, [externalErrors.duplicate])
 
-  /**
-   * Handle input changes with validation
-   */
   const handleInputChange = (field, value) => {
     setFormData(prev => ({
       ...prev,
@@ -73,9 +53,6 @@ function RSVPForm({
     }))
   }
 
-  /**
-   * Validate form on submit
-   */
   const validateForm = () => {
     const validationErrors = validateRSVP(formData)
     setErrors(validationErrors)
@@ -87,9 +64,6 @@ function RSVPForm({
     return Object.keys(validationErrors).length === 0
   }
 
-  /**
-   * Handle form submission
-   */
   const handleSubmit = (e) => {
     e.preventDefault()
     
@@ -100,9 +74,6 @@ function RSVPForm({
     onSubmit(formData)
   }
 
-  /**
-   * Get error message for a field
-   */
   const getFieldError = (field) => {
     // Don't show duplicate error if it's been externally cleared
     if (field === 'duplicate' && !externalErrors.duplicate) {
@@ -111,9 +82,6 @@ function RSVPForm({
     return errors[field] || externalErrors[field] || ''
   }
 
-  /**
-   * Check if field has error
-   */
   const hasFieldError = (field) => {
     return touched[field] && !!getFieldError(field)
   }
