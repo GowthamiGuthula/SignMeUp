@@ -40,7 +40,7 @@ const EVENTS_DATA = [
       ],
     },
     {
-      id: 4,
+      id: 3,
       name: 'Hackathon 2026',
       date: '2026-06-20',
       time: '8:00 AM - 8:00 AM (next day)',
@@ -62,25 +62,7 @@ const EVENTS_DATA = [
       ],
     },
     {
-      id: 6,
-      name: 'AI Ethics Seminar',
-      date: '2026-03-10',
-      time: '2:00 PM - 5:00 PM',
-      location: 'Auditorium A, Tech Campus',
-      category: 'Seminar',
-      totalSlots: 50,
-      slotsBooked: 30,
-      description:
-        'Discuss the ethical implications of AI in society, including bias, privacy, and future regulations. Panel discussion with experts.',
-      image:
-        'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=350&fit=crop',
-      attendees: [
-        { firstName: 'Tom', lastName: 'Harris', email: 'tom@example.com', phone: '5550123456' },
-        { firstName: 'Uma', lastName: 'King', email: 'uma@example.com', phone: '5551234567' }
-      ],
-    },
-    {
-      id: 7,
+      id: 4,
       name: 'Virtual Reality Expo',
       date: '2026-08-15',
       time: '10:00 AM - 6:00 PM',
@@ -99,7 +81,26 @@ const EVENTS_DATA = [
       ],
     },
     {
-      id: 8,
+      id: 5,
+      name: 'AI Ethics Seminar',
+      date: '2026-03-10',
+      time: '2:00 PM - 5:00 PM',
+      location: 'Auditorium A, Tech Campus',
+      category: 'Seminar',
+      totalSlots: 50,
+      slotsBooked: 30,
+      description:
+        'Discuss the ethical implications of AI in society, including bias, privacy, and future regulations. Panel discussion with experts.',
+      image:
+        'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=350&fit=crop',
+      attendees: [
+        { firstName: 'Tom', lastName: 'Harris', email: 'tom@example.com', phone: '5550123456' },
+        { firstName: 'Uma', lastName: 'King', email: 'uma@example.com', phone: '5551234567' }
+      ],
+    },
+    
+    {
+      id: 6,
       name: 'Startup Pitch Night',
       date: '2026-09-05',
       time: '6:00 PM - 9:00 PM',
