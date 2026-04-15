@@ -1,26 +1,11 @@
 import { useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { useEvents } from '../context/EventsContext'
-import { useAttendees } from '../hooks/useAttendees'
-import { formatAttendeeName, getAttendeeFullName, getAttendeeAvatarLetter } from '../utils/attendeeHelpers'
-import { validateRSVP } from '../utils/validation'
+import { useAttendees } from '../utils/useAttendees'
+import { formatAttendeeName, getAttendeeAvatarLetter } from '../utils/attendeeHelpers'
 import RSVPForm from '../components/RSVPForm'
 import './EventDetail.css'
 
-/**
- * EventDetail Component
- * 
- * This component displays detailed information about a single event and handles
- * the RSVP functionality. It shows event details, current attendees, and provides
- * a form for users to RSVP with validation and duplicate detection.
- * 
- * Features:
- * - Event information display
- * - Attendees list with avatars
- * - RSVP form with validation
- * - Duplicate attendee detection
- * - Edit/cancel existing RSVP options
- */
+
 function EventDetail() {
   // Get event ID from URL parameters
   const { id } = useParams()
@@ -62,16 +47,6 @@ function EventDetail() {
     existingAttendee: null
   })
 
-  /**
-   * Consolidated Input Handler
-   * 
-   * Handles all form input changes and automatically clears validation errors
-   * for the changed field. This reduces code duplication and provides
-   * consistent behavior across all form fields.
-   * 
-   * @param {String} field - The field name being updated
-   * @param {String} value - The new value for the field
-   */
   const handleInputChange = (field, value) => {
     setRsvpForm(prev => ({
       ...prev,
@@ -102,11 +77,6 @@ function EventDetail() {
   // Use custom hook for duplicate checking
   const alreadyAttending = isAlreadyAttending(rsvpForm.savedUserInfo)
 
-  /**
-   * Handle RSVPForm Component Submission
-   * 
-   * Processes form data from the RSVPForm component.
-   */
   const handleRSVPFormSubmit = (formData) => {
     // Check for duplicate attendee only for "Attending" RSVP
     if (formData.rsvp === 'Attending') {
@@ -153,11 +123,6 @@ function EventDetail() {
     }
   }
 
-  /**
-   * Handle Cancel RSVP
-   * 
-   * Cancels the user's RSVP and resets the form state.
-   */
   const handleCancel = () => {
     if (alreadyAttending) {
       const userName = getAttendeeNameForRSVP(rsvpForm.savedUserInfo)
@@ -173,11 +138,6 @@ function EventDetail() {
     }))
   }
 
-  /**
-   * Handle Edit RSVP
-   * 
-   * Cancels current RSVP and returns to form for editing.
-   */
   const handleEdit = () => {
     if (alreadyAttending) {
       const userName = getAttendeeNameForRSVP(rsvpForm.savedUserInfo)
@@ -192,11 +152,6 @@ function EventDetail() {
     }))
   }
 
-  /**
-   * Handle Cancel Existing Attendee
-   * 
-   * Removes an existing attendee and clears the form.
-   */
   const handleCancelExisting = () => {
     if (rsvpForm.existingAttendee) {
       const attendeeName = getAttendeeNameForRSVP(rsvpForm.existingAttendee)
@@ -216,11 +171,6 @@ function EventDetail() {
     }))
   }
 
-  /**
-   * Handle Edit Existing Attendee
-   * 
-   * Populates form with existing attendee data for editing.
-   */
   const handleEditExisting = () => {
     if (rsvpForm.existingAttendee) {
       const existing = rsvpForm.existingAttendee

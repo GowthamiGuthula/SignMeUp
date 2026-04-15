@@ -2,7 +2,6 @@ import { useState } from 'react'
 import './Contact.css'
 
 function Contact() {
-  // useState to manage the form fields
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')

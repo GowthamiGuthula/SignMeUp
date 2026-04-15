@@ -24,7 +24,6 @@ function About() {
         <li><strong>React</strong> — UI library</li>
         <li><strong>React Router</strong> — page navigation</li>
         <li><strong>useState</strong> — local component state</li>
-        <li><strong>Context API</strong> — shared state across components</li>
         <li><strong>Props</strong> — passing data between components</li>
       </ul>
 

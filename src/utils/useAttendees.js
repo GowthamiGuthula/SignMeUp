@@ -1,5 +1,5 @@
 import { useEvents } from '../context/EventsContext'
-import { attendeesMatch } from '../utils/attendeeHelpers'
+import { attendeesMatch } from './attendeeHelpers'
 
 export const useAttendees = (eventId) => {
   // Get events and operations from context

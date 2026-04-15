@@ -4,7 +4,6 @@ import { useEvents } from '../context/EventsContext'
 import EventCard from '../components/EventCard'
 import './Events.css'
 
-// Helper: check if an event date is in the past
 function isPast(event) {
   return new Date(event.date) < new Date(new Date().toDateString())
 }
@@ -43,7 +42,6 @@ function Events() {
         onChange={(e) => setSearch(e.target.value)}
       />
 
-      {/* Event list — passes each event as a PROP to EventCard */}
       <div className="events-grid">
         {filtered.map((ev) => (
           <EventCard key={ev.id} event={ev} isPast={isPast(ev)} />
