@@ -32,29 +32,11 @@ const EVENTS_DATA = [
       description:
         'Outdoor team activities, relay races, trivia, volleyball, and a catered lunch with vegetarian options. A great way to bond with colleagues.',
       image:
-        'https://images.unsplash.com/photo-1529543544282-ea99407407c1?w=600&h=350&fit=crop',
+        'https://images.unsplash.com/photo-1574623452334-1e0ac2b3ccb4?w=600&h=350&fit=crop',
       attendees: [
         { firstName: 'Frank', lastName: 'Wilson', email: 'frank@example.com', phone: '5556789012' },
         { firstName: 'Grace', lastName: 'Taylor', email: 'grace@example.com', phone: '5557890123' },
         { firstName: 'Heidi', lastName: 'Anderson', email: 'heidi@example.com', phone: '5558901234' }
-      ],
-    },
-    {
-      id: 3,
-      name: 'Design Sprint',
-      date: '2025-03-10',
-      time: '9:00 AM - 3:00 PM',
-      location: 'Studio B, Innovation Hub',
-      category: 'Workshop',
-      totalSlots: 20,
-      slotsBooked: 12,
-      description:
-        'A one-day design sprint: map a challenge, sketch solutions, prototype, and test with real users. Open to designers, developers, and PMs.',
-      image:
-        'https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=600&h=350&fit=crop',
-      attendees: [
-        { firstName: 'Ivan', lastName: 'Martinez', email: 'ivan@example.com', phone: '5559012345' },
-        { firstName: 'Judy', lastName: 'Thomas', email: 'judy@example.com', phone: '5550123456' }
       ],
     },
     {
@@ -80,25 +62,60 @@ const EVENTS_DATA = [
       ],
     },
     {
-      id: 5,
-      name: 'Onboarding Mixer',
-      date: '2025-02-28',
-      time: '5:00 PM - 7:30 PM',
-      location: 'Rooftop Lounge, HQ Building',
-      category: 'Social',
-      totalSlots: 40,
+      id: 6,
+      name: 'AI Ethics Seminar',
+      date: '2026-07-10',
+      time: '2:00 PM - 5:00 PM',
+      location: 'Auditorium A, Tech Campus',
+      category: 'Seminar',
+      totalSlots: 50,
       slotsBooked: 30,
       description:
-        'A casual evening mixer for new team members. Meet leadership, learn about company culture, and connect with peers over appetizers.',
+        'Discuss the ethical implications of AI in society, including bias, privacy, and future regulations. Panel discussion with experts.',
       image:
-        'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&h=350&fit=crop',
+        'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=350&fit=crop',
       attendees: [
-        { firstName: 'Quinn', lastName: 'Lewis', email: 'quinn@example.com', phone: '5557890123' },
-        { firstName: 'Ruth', lastName: 'Walker', email: 'ruth@example.com', phone: '5558901234' },
-        { firstName: 'Steve', lastName: 'Hall', email: 'steve@example.com', phone: '5559012345' }
+        { firstName: 'Tom', lastName: 'Harris', email: 'tom@example.com', phone: '5550123456' },
+        { firstName: 'Uma', lastName: 'King', email: 'uma@example.com', phone: '5551234567' }
+      ],
+    },
+    {
+      id: 7,
+      name: 'Virtual Reality Expo',
+      date: '2026-08-15',
+      time: '10:00 AM - 6:00 PM',
+      location: 'Expo Hall, Innovation Center',
+      category: 'Expo',
+      totalSlots: 100,
+      slotsBooked: 60,
+      description:
+        'Explore the latest in VR technology. Demos from leading companies, networking sessions, and hands-on experiences.',
+      image:
+        'https://images.unsplash.com/photo-1626379953822-baec19c3accd?w=600&h=350&fit=crop',
+      attendees: [
+        { firstName: 'Victor', lastName: 'Lee', email: 'victor@example.com', phone: '5552345678' },
+        { firstName: 'Wendy', lastName: 'Moore', email: 'wendy@example.com', phone: '5553456789' },
+        { firstName: 'Xavier', lastName: 'Perez', email: 'xavier@example.com', phone: '5554567890' }
+      ],
+    },
+    {
+      id: 8,
+      name: 'Startup Pitch Night',
+      date: '2026-09-05',
+      time: '6:00 PM - 9:00 PM',
+      location: 'Stage Area, Downtown Venue',
+      category: 'Networking',
+      totalSlots: 80,
+      slotsBooked: 50,
+      description:
+        'Watch emerging startups pitch their ideas to investors. Networking opportunities and Q&A sessions.',
+      image:
+        'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&h=350&fit=crop',
+      attendees: [
+        { firstName: 'Yara', lastName: 'Roberts', email: 'yara@example.com', phone: '5555678901' },
+        { firstName: 'Zane', lastName: 'Scott', email: 'zane@example.com', phone: '5556789012' }
       ],
     },
   ]
   
   export default EVENTS_DATA
-  
