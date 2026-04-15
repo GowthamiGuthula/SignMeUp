@@ -2,7 +2,7 @@ const EVENTS_DATA = [
     {
       id: 1,
       name: 'React Workshop',
-      date: '2026-04-15',
+      date: '2026-05-15',
       time: '10:00 AM - 4:00 PM',
       location: 'Room 101, Tech Campus',
       category: 'Workshop',
@@ -23,7 +23,7 @@ const EVENTS_DATA = [
     {
       id: 2,
       name: 'Team Building Picnic',
-      date: '2026-05-01',
+      date: '2026-07-01',
       time: '12:00 PM - 5:00 PM',
       location: 'Central Park, Pavilion B',
       category: 'Social',
@@ -64,7 +64,7 @@ const EVENTS_DATA = [
     {
       id: 6,
       name: 'AI Ethics Seminar',
-      date: '2026-07-10',
+      date: '2026-03-10',
       time: '2:00 PM - 5:00 PM',
       location: 'Auditorium A, Tech Campus',
       category: 'Seminar',
